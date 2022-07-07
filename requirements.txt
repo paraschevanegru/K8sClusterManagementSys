@@ -1,0 +1,4 @@
+blacksheep
+uvicorn==0.14.0
+uvloop==0.14.0; platform_system != "Windows"
+roconfiguration==1.0.8

@@ -1,0 +1,6 @@
+# Setarile implicite ale aplicatiei. Aceste setari sunt citite im app.configuration.py
+app_name: K8sClusterManagementSys
+
+debug: true # Activarea reincarcarii automate a Jinja2 templates
+
+show_error_details: true
