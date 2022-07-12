@@ -4,6 +4,7 @@ from blacksheep.server.application import Application
 from blacksheep.server.controllers import Controller, get, post
 from blacksheep.messages import Response
 from dataclasses import dataclass
+from pathlib import Path
 
 from app.controllers.k8s import K8sBase
 
@@ -439,3 +440,7 @@ class Home(Controller):
                 stderr=subprocess.STDOUT,
                 shell=True,
             )
+            path_to_config_file = (
+                Path(__file__).parent.parent.parent / "rke2-terraform/k8s.yaml"
+            )
+            path_to_config_file.unlink()
